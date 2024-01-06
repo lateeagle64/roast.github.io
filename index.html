@@ -21,7 +21,6 @@
   <div id="buttonContainer"></div>
 
   <script>
-    // Replace 'USERNAME', 'REPO', and 'FOLDER' with your GitHub username, repository name, and folder path
     const username = "lateeagle64";
     const repo = "lateeagle64.github.io";
     const folder = "games";
@@ -42,8 +41,11 @@
 
           // Add a click event listener to the button (you can customize this)
           button.addEventListener('click', () => {
-            // Replace with your desired action when the button is clicked
-            alert(`Button for file '${file.name}' clicked!`);
+            // Get the URL from the JSON data
+            const url = jsonData.info[0].url;
+
+            // Redirect the user to the specified URL
+            window.location.href = url;
           });
 
           buttonContainer.appendChild(button);
