@@ -54,20 +54,20 @@
 
         // Iterate through files and create a button for each one
         data.forEach(file => {
-          const button = document.createElement('button');
-          button.textContent = file.info.name;
+        const button = document.createElement('button');
+        button.textContent = file.info.name; // Use the name from the JSON data
 
-          // Add a click event listener to the button
-          button.addEventListener('click', () => {
-            // Get the URL from the file data
-             const url = file.info.url;
+        // Add a click event listener to the button
+        button.addEventListener('click', () => {
+          // Get the URL from the file data
+          const url = file.info.url;
 
-            // Redirect the user to the specified URL
-            window.location.href = url;
-          });
-
-          buttonContainer.appendChild(button);
+          // Redirect the user to the specified URL
+          window.location.href = url;
         });
+
+        buttonContainer.appendChild(button);
+      });
 
         // Add a search functionality
         const searchInput = document.getElementById('searchInput');
