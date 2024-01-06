@@ -36,14 +36,14 @@
           // Iterate through files and create a button for each one
           data.forEach(file => {
             const button = document.createElement('button');
-            const name = file.name;
+            const name = file.info.name;
             
             button.textContent = name;
 
             // Add a click event listener to the button
             button.addEventListener('click', () => {
               // Get the URL from the file data
-              const url = file.download_url;
+              const url = file.info.url;
 
               // Redirect the user to the specified URL
               window.location.href = url;
