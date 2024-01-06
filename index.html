@@ -1,57 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>lateeagle64.github.io</title>
-  </head>
-  <body>
-    <h1>lateeagle64.github.io</h1>
-    <h2>welcome!</h2>
-    <p>
-      view and play unblocked games
-    </p>
-    <p>
-      current amount of games: ?
-    </p>
-    <h2>games</h2>
-    <div id="buttonContainer"></div> <!-- Fixed closing tag -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>lateeagle64.github.io</title>
+  <style>
+    /* Add styling for the search input */
+    #searchInput {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
 
-    <script>
-      const username = "lateeagle64";
-      const repo = "lateeagle64.github.io";
-      const folder = "games";
+    /* Add styling for the scrolling frame */
+    #scrollingFrame {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>lateeagle64.github.io</h1>
+  <h2>welcome!</h2>
+  <p>view and play unblocked games</p>
+  <p id="gamesCount">current amount of games: Loading...</p>
 
-      // GitHub API endpoint to get contents of a folder
-      const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${folder}`;
+  <!-- Add a search input -->
+  <input type="text" id="searchInput" placeholder="Search for a game">
 
-      // Fetch data from GitHub API
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          const buttonContainer = document.getElementById('buttonContainer');
+  <h2>games</h2>
+  
+  <!-- Add a scrolling frame for the buttons -->
+  <div id="scrollingFrame">
+    <div id="buttonContainer"></div>
+  </div>
 
-          // Iterate through files and create a button for each one
-          data.forEach(file => {
-            const button = document.createElement('button');
-            
-            button.textContent = file.name;
+  <script>
+    const username = "lateeagle64";
+    const repo = "lateeagle64.github.io";
+    const folder = "games";
 
-            // Add a click event listener to the button
-            button.addEventListener('click', () => {
-              // Get the URL from the file data
-              const url = file.info.url;
+    // GitHub API endpoint to get contents of a folder
+    const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${folder}`;
 
-              // Redirect the user to the specified URL
-              window.location.href = url;
-            });
+    // Fetch data from GitHub API
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const buttonContainer = document.getElementById('buttonContainer');
+        const gamesCountElement = document.getElementById('gamesCount');
+        const scrollingFrame = document.getElementById('scrollingFrame');
 
-            buttonContainer.appendChild(button);
+        // Display the current number of games
+        gamesCountElement.textContent = `current amount of games: ${data.length}`;
+
+        // Iterate through files and create a button for each one
+        data.forEach(file => {
+          const button = document.createElement('button');
+          button.textContent = file.name;
+
+          // Add a click event listener to the button
+          button.addEventListener('click', () => {
+            // Get the URL from the file data
+            const url = file.url;
+
+            // Redirect the user to the specified URL
+            window.location.href = url;
           });
-        })
-        .catch(error => console.error('Error fetching data:', error));
-    </script>
-  </body>
+
+          buttonContainer.appendChild(button);
+        });
+
+        // Add a search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', () => {
+          const searchTerm = searchInput.value.toLowerCase();
+          const buttons = buttonContainer.getElementsByTagName('button');
+
+          // Show or hide buttons based on the search term
+          Array.from(buttons).forEach(button => {
+            const buttonText = button.textContent.toLowerCase();
+            if (buttonText.includes(searchTerm)) {
+              button.style.display = 'block';
+            } else {
+              button.style.display = 'none';
+            }
+          });
+
+          // Adjust the scrolling frame height based on the number of visible buttons
+          scrollingFrame.style.maxHeight = `${buttonContainer.clientHeight}px`;
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        const gamesCountElement = document.getElementById('gamesCount');
+        gamesCountElement.textContent = 'Error fetching games data';
+      });
+  </script>
+</body>
 </html>
