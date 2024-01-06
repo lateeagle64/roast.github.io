@@ -49,8 +49,10 @@ p {
   margin: 10px 0;
   padding: 10px;
   font-size: 1em;
-  border: none;
+  border: 1px solid #fff; /* White border */
   border-radius: 5px;
+  background-color: transparent; /* Transparent background */
+  color: #fff;
 }
 
 /* Style for the scrolling frame */
@@ -63,16 +65,17 @@ p {
 #buttonContainer button {
   margin: 5px 0;
   padding: 10px;
+  font-family: "Monocraft", sans-serif;
   font-size: 1em;
-  background-color: #fff;
-  color: #12004f; /* Set the button text color to the background gradient color */
-  border: none;
-  border-radius: 5px;
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #fff; /* White border */
+  color: #fff;
   cursor: pointer;
+  border-radius: 0; /* No corner radius */
 }
 
 /* Change button style on hover */
 #buttonContainer button:hover {
-  background-color: #07001f;
-  color: #fff;
+  background-color: #fff;
+  color: #07001f; /* Set text color to the background gradient color */
 }
