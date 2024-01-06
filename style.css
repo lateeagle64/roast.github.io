@@ -26,23 +26,53 @@ h1 {
   font-size: 4em;
   font-family: "Monocraft", sans-serif;
   font-weight: bold;
+  color: #fff;
 }
 
 h2 {
   font-family: "Monocraft", sans-serif;
   font-size: 3em;
-}
-h1,
-
-h2 {
-  margin: 0;
   color: #fff;
 }
+
 p {
   font-family: "Monocraft", sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   max-width: 50%;
   text-align: center;
+  color: #fff;
+}
+
+/* Style for the search input */
+#searchInput {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Style for the scrolling frame */
+#scrollingFrame {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Style for the buttons */
+#buttonContainer button {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #fff;
+  color: #12004f; /* Set the button text color to the background gradient color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Change button style on hover */
+#buttonContainer button:hover {
+  background-color: #07001f;
   color: #fff;
 }
