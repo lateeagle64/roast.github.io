@@ -60,10 +60,10 @@
           // Add a click event listener to the button
           button.addEventListener('click', () => {
             // Get the URL from the file data
-            const url = file.url;
+             const url = file.download_url;
 
             // Redirect the user to the specified URL
-            <a href=url target="_blank"></a>
+            window.location.href = url;
           });
 
           buttonContainer.appendChild(button);
