@@ -27,9 +27,8 @@ h1 {
   font-weight: bold;
   animation-duration: 1s;
   animation-iteration-count: 1;
-}
 
-@keyframes colorRotate {
+  @keyframes colorRotate {
   from {
     color: #6666ff;
   }
@@ -45,6 +44,7 @@ h1 {
   100% {
     color: #6666ff;
   }
+}
 }
 
 h2 {
