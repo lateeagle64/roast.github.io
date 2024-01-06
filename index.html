@@ -36,9 +36,8 @@
           // Iterate through files and create a button for each one
           data.forEach(file => {
             const button = document.createElement('button');
-            const name = file.info.name;
             
-            button.textContent = name;
+            button.textContent = file.name;
 
             // Add a click event listener to the button
             button.addEventListener('click', () => {
