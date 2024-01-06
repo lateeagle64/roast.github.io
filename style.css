@@ -29,7 +29,7 @@ h1 {
 
 h2 {
   font-family: "Monocraft", sans-serif;
-  font-size: 7em;
+  font-size: 4.5em;
 }
 h1,
 h2 {
@@ -38,7 +38,7 @@ h2 {
 }
 p {
   font-family: Monocraft, sans-serif;
-  font-size: 4.5em;
+  font-size: 4em;
   max-width: 50%;
   text-align: center;
   color: #fff;
