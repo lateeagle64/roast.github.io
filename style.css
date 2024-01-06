@@ -57,8 +57,9 @@ h2 {
   color: #fff;
 }
 p {
-  font-family: Monocraft, sans-serif;
+  font-family: "Monocraft", sans-serif;
   font-size: 1.5em;
+  font-weight: bold;
   max-width: 50%;
   text-align: center;
   color: #fff;
