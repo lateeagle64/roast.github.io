@@ -17,12 +17,7 @@
       current amount of games: ?
     </p>
     <h2>games</h2>
-  <div id="buttonContainer"></div                        
-   <style>
-    body {
-      padding: 20px;
-    }
-  </style>
+  <div id="buttonContainer"></div
   <script>
     const username = "lateeagle64";
     const repo = "lateeagle64.github.io";
@@ -40,7 +35,9 @@
         // Iterate through files and create a button for each one
         data.forEach(file => {
           const button = document.createElement('button');
-          button.textContent = file.name;
+          const name = jsonData.info[0].name;
+          
+          button.textContent = name;
 
           // Add a click event listener to the button (you can customize this)
           button.addEventListener('click', () => {
