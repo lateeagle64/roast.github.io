@@ -22,14 +22,14 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-family: "Monocraft", sans-serif;
   font-weight: bold;
 }
 
 h2 {
   font-family: "Monocraft", sans-serif;
-  font-size: 4em;
+  font-size: 3em;
 }
 h1,
 h2 {
@@ -38,7 +38,7 @@ h2 {
 }
 p {
   font-family: Monocraft, sans-serif;
-  font-size: 3em;
+  font-size: 1.5em;
   max-width: 50%;
   text-align: center;
   color: #fff;
