@@ -17,41 +17,42 @@
       current amount of games: ?
     </p>
     <h2>games</h2>
-  <div id="buttonContainer"></div
-  <script>
-    const username = "lateeagle64";
-    const repo = "lateeagle64.github.io";
-    const folder = "games";
+    <div id="buttonContainer"></div> <!-- Fixed closing tag -->
 
-    // GitHub API endpoint to get contents of a folder
-    const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${folder}`;
+    <script>
+      const username = "lateeagle64";
+      const repo = "lateeagle64.github.io";
+      const folder = "games";
 
-    // Fetch data from GitHub API
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const buttonContainer = document.getElementById('buttonContainer');
+      // GitHub API endpoint to get contents of a folder
+      const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${folder}`;
 
-        // Iterate through files and create a button for each one
-        data.forEach(file => {
-          const button = document.createElement('button');
-          const name = jsonData.info[0].name;
-          
-          button.textContent = name;
+      // Fetch data from GitHub API
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const buttonContainer = document.getElementById('buttonContainer');
 
-          // Add a click event listener to the button (you can customize this)
-          button.addEventListener('click', () => {
-            // Get the URL from the JSON data
-            const url = jsonData.info[0].url;
+          // Iterate through files and create a button for each one
+          data.forEach(file => {
+            const button = document.createElement('button');
+            const name = file.name;
+            
+            button.textContent = name;
 
-            // Redirect the user to the specified URL
-            window.location.href = url;
+            // Add a click event listener to the button
+            button.addEventListener('click', () => {
+              // Get the URL from the file data
+              const url = file.download_url;
+
+              // Redirect the user to the specified URL
+              window.location.href = url;
+            });
+
+            buttonContainer.appendChild(button);
           });
-
-          buttonContainer.appendChild(button);
-        });
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  </script>
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    </script>
   </body>
 </html>
