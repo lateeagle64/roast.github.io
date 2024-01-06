@@ -29,10 +29,22 @@ h1 {
   animation-iteration-count: 1;
 }
 
-@keyframes head {
-0% {innerHtml="%ct@e^F#e64.gi@I*.i)"}
-50% {innerHtml="%Ate^&gle6).*%@hu!.#o"}
-100% {innerHtml="lateeagle64.github.io"}
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
 }
 
 h2 {
