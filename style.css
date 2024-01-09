@@ -13,5 +13,10 @@ body {
   font-family: "GothamPro", sans-serif;
   font-weight: bold;
   color: #fff;
-  animation: fadeIn 5s;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
