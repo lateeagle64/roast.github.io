@@ -8,11 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>lateeagle64.github.io</title>
-<style>
+  <style>
   h1 {text-align: center;}
-</style>
+
+  #sizeAnim {
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+    animation: mymove 5s 1;
+  }
+  
+  @keyframes mymove {
+    50% {font-size: 40px;}
+  }
+    
+  </style>
 </head>
 <body>
-  <h1>lateeagle64.github.io</h1>
+  <div id="sizeAnim">
+    <h1>lateeagle64.github.io</h1>
+  </div>
 </body>
 </html>
