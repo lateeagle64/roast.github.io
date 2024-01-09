@@ -13,7 +13,7 @@ body {
   font-family: "GothamPro", sans-serif;
   font-weight: bold;
   color: #fff;
-  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
