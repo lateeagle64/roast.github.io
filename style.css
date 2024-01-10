@@ -16,6 +16,14 @@ body {
   animation-fill-mode: forwards ;
 }
 
+.subHeading {
+  font-family: "GothamPro", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  animation: fadeIn 2.5s;
+  animation-fill-mode: forwards ;
+}
+
 .controller {
   animation: fadeIncontroller 1.5s;
   animation-fill-mode: forwards ;
