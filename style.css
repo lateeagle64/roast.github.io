@@ -13,7 +13,7 @@ body {
   font-weight: bold;
   color: #fff;
   animation: fadeIn 2s;
-  animation: sizeIn 2s;
+  animation: sizeIn 1s;
 }
 
 @keyframes fadeIn {
