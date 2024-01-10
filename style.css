@@ -16,7 +16,17 @@ body {
   animation-fill-mode: forwards ;
 }
 
+.controller {
+  animation: fadeIn 2s;
+  animation-fill-mode: forwards ;
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; font-size: 1em; }
   100% { opacity: 1; font-size: 3em; }
+}
+
+@keyframes controller {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
