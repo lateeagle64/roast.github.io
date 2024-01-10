@@ -19,10 +19,6 @@ body {
 .controller {
   animation: fadeIncontroller 1.5s;
   animation-fill-mode: forwards ;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
 @keyframes fadeIn {
