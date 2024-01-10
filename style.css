@@ -17,6 +17,8 @@ body {
 }
 
 .controller {
+  height: 200px;
+  width: 200px;
   animation: fadeIncontroller 1.5s;
   animation-fill-mode: forwards ;
 }
