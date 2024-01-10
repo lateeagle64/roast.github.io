@@ -5,7 +5,7 @@
 
 body {
   background: rgb(18,0,79);
-  background: radial-gradient(circle, rgba(18,0,79,1) 0%, rgba(18,0,79,1) 40%, rgba(35,85,208,1) 100%);
+  background: linear-gradient(45deg, rgba(18,0,79,1) 0%, rgba(18,0,79,1) 40%, rgba(35,85,208,1) 100%);
 }
 
 .title {
