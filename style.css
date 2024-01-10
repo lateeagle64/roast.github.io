@@ -17,7 +17,7 @@ body {
 }
 
 .controller {
-  animation: fadeIncontroller 2s;
+  animation: fadeIncontroller 1.5s;
   animation-fill-mode: forwards ;
   display: block;
   margin-left: auto;
