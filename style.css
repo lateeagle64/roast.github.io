@@ -9,14 +9,19 @@ body {
 }
 
 .title {
-  font-size: 3em;
   font-family: "GothamPro", sans-serif;
   font-weight: bold;
   color: #fff;
   animation: fadeIn 2s;
+  animation: sizeIn 2s;
 }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes sizeIn {
+  0% { font-size: 0em; }
+  100% { font-size: 3em; }
 }
