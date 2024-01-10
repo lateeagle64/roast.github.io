@@ -23,6 +23,6 @@ body {
 }
 
 @keyframes sizeIn {
-  0% { font-size: 0em; }
+  0% { font-size: 1em; }
   100% { font-size: 3em; }
 }
