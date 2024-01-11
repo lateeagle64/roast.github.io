@@ -26,7 +26,6 @@ body {
 
 .controller {
   animation: fadeIncontroller 1.5s;
-  animation: rotation 2s infinite linear;
   animation-fill-mode: forwards ;
 }
 
@@ -38,13 +37,4 @@ body {
 @keyframes fadeIncontroller {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
 }
