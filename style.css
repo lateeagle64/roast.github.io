@@ -30,7 +30,7 @@ body {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; font-size: 1vw; }
+  0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 3vw; }
 }
 
