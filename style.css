@@ -20,7 +20,7 @@ body {
   font-family: "GothamPro", sans-serif;
   font-weight: bold;
   color: #fff;
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
   animation-fill-mode: forwards ;
 }
 
